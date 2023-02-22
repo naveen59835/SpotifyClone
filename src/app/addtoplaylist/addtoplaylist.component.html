@@ -1,0 +1,41 @@
+<h2>Add to Playlist</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th>Track ID</th>
+      <th>Track Name</th>
+      <th>Artist Name</th>
+      <th>Duration</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let track of tracks">
+      <td>{{ track.trackId }}</td>
+      <td>{{ track.trackName }}</td>
+      <td>{{ track.artistName }}</td>
+      <td>{{ track.duration }}</td>
+      <td>
+<div class="progress-bar">
+          <div class="progress" [style.width]="progress + '%'"></div>
+        </div>
+        <button (click)="delete(track)">Delete</button>
+      </td>
+    </tr>
+    <div *ngFor="let track of tracks; let i = index">
+
+      <button (click)="play(i)">Play</button>
+      <button *ngIf="isPlaying" (click)="pause()">Pause</button>
+
+    </div>
+  </tbody>
+</table>
+
+
+
+
+
+
+
+

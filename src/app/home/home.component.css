@@ -1,0 +1,28 @@
+.example-card {
+  margin: 0 auto;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+}
+
+.example-card mat-card {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  .example-card {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .example-card mat-card {
+    width: calc(33.33% - 20px);
+    margin-right: 20px;
+    margin-bottom: 20px;
+  }
+
+  .example-card mat-card:last-child {
+    margin-right: 0;
+  }
+}

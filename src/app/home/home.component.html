@@ -1,0 +1,21 @@
+<div>
+<mat-card class="example-card">
+  <mat-card *ngFor="let member of members" fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)" >
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <p><mat-card-title>Song Name:{{member.trackName}}</mat-card-title>
+      <mat-card-subtitle>Artist:{{member.artistName}}</mat-card-subtitle></p>
+    </mat-card-header>
+    <img style="width: 200px;height: 200px; position: relative; left: 100px;" mat-card-image [src]="member.url" alt="Photo of {{member.duration}}">
+    <mat-card-content>
+      <p>Track ID:
+        {{member.trackId}}
+      </p>
+      <p>Duration:
+        {{member.duration}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+</mat-card>
+</div>
+

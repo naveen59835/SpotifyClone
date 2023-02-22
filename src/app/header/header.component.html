@@ -1,0 +1,35 @@
+<p>
+  <mat-toolbar style="background-color: black; height: 80px;">
+    <span><img src="../assets/images/images.png" style="width: 140px;"></span>
+    <span class="example-spacer"></span>
+    <mat-icon routerLink="home" >home </mat-icon>
+    <mat-icon class="material-symbols-outlined" routerLink="registration" >
+      app_registration</mat-icon>
+
+      <mat-icon><span class="material-symbols-outlined" routerLink="login">
+        login
+        </span></mat-icon>
+        <mat-icon class="material-symbols-outlined" routerLink="music">
+          headset_mic
+        </mat-icon>
+
+        <mat-icon class="material-symbols-outlined" routerLink="playlist">
+          playlist_add
+        </mat-icon>
+        <!-- <mat-icon class="material-symbols-outlined" routerLink="sample">
+          playlist_add
+        </mat-icon> -->
+        <mat-icon> <span class="material-symbols-outlined" type="submit" (click)="logout()">
+          logout
+          </span>
+        </mat-icon>
+
+  </mat-toolbar>
+</p>
+
+
+
+
+
+<router-outlet></router-outlet>
+
